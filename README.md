@@ -1,6 +1,6 @@
 # Malware Stego Sample
 
-This project represents some PoC for least significant bit malware steganography as identified in a wild malware sample.
+This project represents some PoC for least significant bit malware steganography as identified in a wild [malware sample](https://www.hybrid-analysis.com/sample/f1f0341bfe3b803ca654f43290410584c03c80c22c1ae1e7e87ef1d7f5b7e6ed?environmentId=120).
 
 The malware sample was originally an HTA file attachment delivered via email that appeared to represent a job offer. Inside the HTA file was an obfuscated Powershell script which pulled down a file named banana.png and performed an operation on it. Seemingly harmless, the png image file concealled a series of modified values within the green and blue rgb values of a subset of pixels within the image. These modified pixels are meaningles without the PowerShell script which carefully selects the modified range of pixels, and extracts the hidden values, resulting in the execution of another Powershell script which connects to a remote attacker controlled server over SSL, andattempts to download instrcutions every few minutes.
 
