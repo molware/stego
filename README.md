@@ -24,5 +24,6 @@ After running makestego.py to embed it with cleartext the image becomees [stego_
 
 
 If it's hard to see on a white image, you can see which range of pixels were modified highlighted in [red.png](https://github.com/molware/stego/blob/master/cover/red.png)  
-![red](https://user-images.githubusercontent.com/58926312/125150120-3da44e00-e10b-11eb-907d-c2cb6d03aea9.png)
+![red](https://user-images.githubusercontent.com/58926312/125151612-64678200-e115-11eb-8512-70e015755af5.png)
+
 
