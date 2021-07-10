@@ -6,11 +6,11 @@ This project represents some PoC for least significant bit malware steganography
 
 The malware sample was originally an HTA file attachment delivered via email that appeared to represent a job offer. Inside the HTA file was an obfuscated Powershell script which pulled down a file named banana.png and performed an operation on it. Seemingly harmless, the png image file concealled a series of modified values within the green and blue rgb values of a subset of pixels within the image. These modified pixels are meaningles without the PowerShell script which carefully selects the modified range of pixels, and extracts the hidden values, resulting in the execution of another Powershell script which connects to a remote attacker controlled server over SSL, andattempts to download instrcutions every few minutes.
 
-#Makestego.py
+## makestego.py
 
 Makestego.py takes a cover image file and embeds it with any desired text in a range of pixels just like the malware authors embedded their code.
 
-#rstego.py 
+## rstego.py 
 
 rstego.py reverses a stegonographic image, created by make stego.py and prints the cleartext of the embedded values in the image. Use rstego.py on the banana.png sample to see the malicious script embedded by the attackers.
 
